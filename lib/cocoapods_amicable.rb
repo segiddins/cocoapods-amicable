@@ -53,8 +53,8 @@ module CocoaPodsAmicable
     def write_sha1_file
       return unless name = podfile_basename
       sha1_file_path.open('w') do |f|
-        f.write <<~EOS
-          #{checksum}  #{name}
+        f.write <<-EOS
+#{checksum}  #{name}
                    EOS
       end
     end
@@ -75,25 +75,25 @@ module CocoaPodsAmicable
     end
 
     def update_check_manifest_script_phase(build_phase)
-      build_phase.shell_script = <<~SH
-        set -e
-        set -u
-        set -o pipefail
+      build_phase.shell_script = <<-SH
+set -e
+set -u
+set -o pipefail
 
-        fail() {
-            # print error to STDERR
-            echo "error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation." $@ >&2
-            exit 1
-        }
+fail() {
+    # print error to STDERR
+    echo "error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation." $@ >&2
+    exit 1
+}
 
-        diff -q "${PODS_PODFILE_DIR_PATH}/Podfile.lock" "${PODS_ROOT}/Manifest.lock" > /dev/null || fail "The manifest in the sandbox differs from your lockfile."
+diff -q "${PODS_PODFILE_DIR_PATH}/Podfile.lock" "${PODS_ROOT}/Manifest.lock" > /dev/null || fail "The manifest in the sandbox differs from your lockfile."
 
-        if [ -f "${PODS_ROOT}/Podfile.sha1" ]; then
-            (cd "${PODS_PODFILE_DIR_PATH}" && shasum --algorithm 1 --status --check "${PODS_ROOT}/Podfile.sha1") || fail "Your Podfile has been changed since the last time you ran 'pod install'."
-        fi
+if [ -f "${PODS_ROOT}/Podfile.sha1" ]; then
+    (cd "${PODS_PODFILE_DIR_PATH}" && shasum --algorithm 1 --status --check "${PODS_ROOT}/Podfile.sha1") || fail "Your Podfile has been changed since the last time you ran 'pod install'."
+fi
 
-        # This output is used by Xcode 'outputs' to avoid re-running this script phase.
-        echo "SUCCESS" > "${SCRIPT_OUTPUT_FILE_0}"
+# This output is used by Xcode 'outputs' to avoid re-running this script phase.
+echo "SUCCESS" > "${SCRIPT_OUTPUT_FILE_0}"
       SH
 
       build_phase.input_paths = %w[

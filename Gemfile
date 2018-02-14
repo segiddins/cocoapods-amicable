@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 source 'https://rubygems.org'
 
 # Specify your gem's dependencies in cocoapods-amicable.gemspec
@@ -6,8 +8,6 @@ gemspec
 group :development do
   gem 'cocoapods'
 
-  gem 'mocha'
-  gem 'bacon'
-  gem 'mocha-on-bacon'
-  gem 'prettybacon'
+  gem 'rspec'
+  gem 'rubocop'
 end

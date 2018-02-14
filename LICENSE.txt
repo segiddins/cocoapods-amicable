@@ -1,4 +1,4 @@
-Copyright (c) 2018 Samuel Giddins <segiddins@squareup.com>
+Copyright (c) 2018 Samuel Giddins <segiddins@segiddins.me>
 
 MIT License
 

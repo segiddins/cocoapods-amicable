@@ -1,6 +1,7 @@
 # cocoapods-amicable
 
-A description of cocoapods-amicable.
+A small CocoaPods plugin that moves the Podfile checksum to a file in the Sandbox,
+reducing merge conflicts for teams that don't commit their Pods directory.
 
 ## Installation
 
@@ -8,4 +9,8 @@ A description of cocoapods-amicable.
 
 ## Usage
 
-    $ pod spec amicable POD_NAME
+```ruby
+# Podfile
+
+plugin 'cocoapods-amicable'
+```

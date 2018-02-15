@@ -9,5 +9,5 @@ group :development do
   gem 'cocoapods'
 
   gem 'rspec'
-  gem 'rubocop'
+  gem 'rubocop', '<=0.50'
 end

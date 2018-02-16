@@ -1,5 +1,13 @@
 # CocoaPods Amicable Changelog
 
+## 0.1.2 (2018-02-15)
+
+##### Enhancements
+
+* Support Ruby 2.0.0.  
+  [Keith Smiley](https://github.com/keith)
+
+
 ## 0.1.1 (2018-02-14)
 
 ##### Bug Fixes

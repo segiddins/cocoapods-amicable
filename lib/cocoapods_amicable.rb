@@ -68,7 +68,6 @@ echo "SUCCESS" > "${SCRIPT_OUTPUT_FILE_0}"
   end
 end
 
-
 module Pod
   class Installer
     prepend ::CocoaPodsAmicable::InstallerMixin
@@ -84,5 +83,5 @@ module Pod
     class << self
       prepend ::CocoaPodsAmicable::LockfileMixin
     end
-    end
+  end
 end

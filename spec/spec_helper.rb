@@ -27,19 +27,18 @@ module Pod
         @output << message
       end
 
-      alias_method :gets, :next_input
+      alias gets next_input
 
-      def print_warnings
-      end
+      def print_warnings; end
     end
   end
 end
 
 RSpec.configure do |config|
   config.before(:each) do
-    Pod::UI.output = String.new
-    Pod::UI.warnings = String.new
-    Pod::UI.next_input = String.new
+    Pod::UI.output = ''.dup
+    Pod::UI.warnings = ''.dup
+    Pod::UI.next_input = ''.dup
     Pod::Config.instance = nil
   end
 end

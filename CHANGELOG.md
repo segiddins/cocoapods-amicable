@@ -1,5 +1,13 @@
 # CocoaPods Amicable Changelog
 
+## 0.2.0 (2018-04-02)
+
+##### Enhancements
+
+* Rewrote the plugin to avoid saving the user project twice,
+  saving multiple seconds per `pod install` on very large projects.  
+
+
 ## 0.1.2 (2018-02-15)
 
 ##### Enhancements

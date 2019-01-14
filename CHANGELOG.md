@@ -1,6 +1,6 @@
 # CocoaPods Amicable Changelog
 
-## Master
+## 0.3.0 (2019-01-14)
 
 ##### Breaking Changes
 

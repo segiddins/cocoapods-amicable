@@ -1,5 +1,16 @@
 # CocoaPods Amicable Changelog
 
+## Master
+
+##### Enhancements
+
+* None.  
+
+##### Bug Fixes
+
+* None.  
+
+
 ## 0.3.0 (2019-01-14)
 
 ##### Breaking Changes

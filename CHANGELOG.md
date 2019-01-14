@@ -1,5 +1,13 @@
 # CocoaPods Amicable Changelog
 
+## Master
+
+##### Breaking Changes
+
+* Drop support for CocoaPods pre-1.7, support CocoaPods 1.7.  
+  [Dimitris Koutsogiorgas](https://github.com/dnkoutso)
+
+
 ## 0.2.0 (2018-04-02)
 
 ##### Enhancements

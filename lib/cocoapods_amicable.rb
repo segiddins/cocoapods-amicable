@@ -8,7 +8,8 @@ module CocoaPodsAmicable
 
       phase_name = Pod::Installer::UserProjectIntegrator::TargetIntegrator::CHECK_MANIFEST_PHASE_NAME
       native_targets.each do |native_target|
-        phase = Pod::Installer::UserProjectIntegrator::TargetIntegrator.create_or_update_build_phase(native_target, Pod::Installer::UserProjectIntegrator::TargetIntegrator::BUILD_PHASE_PREFIX + phase_name)
+        phase = Pod::Installer::UserProjectIntegrator::TargetIntegrator.create_or_update_shell_script_build_phase(native_target,
+                                                                                                                  Pod::Installer::UserProjectIntegrator::TargetIntegrator::BUILD_PHASE_PREFIX + phase_name)
         native_target.build_phases.unshift(phase).uniq! unless native_target.build_phases.first == phase
 
         phase.shell_script = <<-SH

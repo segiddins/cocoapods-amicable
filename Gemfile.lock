@@ -45,7 +45,7 @@ GIT
 PATH
   remote: .
   specs:
-    cocoapods-amicable (0.3.0)
+    cocoapods-amicable (0.4.0)
 
 GEM
   remote: https://rubygems.org/

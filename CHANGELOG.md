@@ -11,6 +11,17 @@
 * None.  
 
 
+## 0.4.0 (2023-07-23)
+
+##### Enhancements
+
+* Support for Ruby 3.x.  
+
+##### Bug Fixes
+
+* None.  
+
+
 ## 0.3.0 (2019-01-14)
 
 ##### Breaking Changes
